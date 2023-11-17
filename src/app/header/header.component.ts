@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,13 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  public fontOptions: string[] = ['Sans Serif', 'Serif', 'Mono'];
-  public selectedFont: string = 'Sans Serif';
-  public darkMode: boolean = false;
+  fontOptions: string[] = ['Sans Serif', 'Serif', 'Mono'];
+  selectedFont: string = 'Sans Serif';
 
-  constructor() { }
+  @Output() viewModeEmitter: EventEmitter<boolean> = new EventEmitter();
+  @Output() fontEmitter: EventEmitter<string> = new EventEmitter();
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  switchViewMode() {
+    this.viewModeEmitter.emit();
   }
 
+  switchFont() {
+    this.fontEmitter.emit();
+  }
 }

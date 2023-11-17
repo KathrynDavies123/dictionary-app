@@ -3,4 +3,20 @@
 @import "./assets/styles/colors.scss";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
-@import "./assets/styles/theme.scss";
+@import "primeng/resources/themes/bootstrap4-light-purple/theme.css";
+@import "./app/header/header.component.scss";
+@import "./app/search-bar/search-bar.component.scss";
+
+.app-container {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap:45px;
+    margin-top:58px;
+    width:100vw;
+}
+
+app-header, app-search-bar {
+    width:50%;
+}

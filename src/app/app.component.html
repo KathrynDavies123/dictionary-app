@@ -1,2 +1,11 @@
-<app-header></app-header>
+<div
+  class="app-container"
+  [ngClass]="{ 'light-mode': !darkMode, 'dark-mode': darkMode }"
+>
+  <app-header
+    (viewModeEmitter)="darkMode = !darkMode"
+    (fontEmitter)="changeFont()"
+  ></app-header>
+  <app-search-bar></app-search-bar>
+</div>
 <router-outlet></router-outlet>

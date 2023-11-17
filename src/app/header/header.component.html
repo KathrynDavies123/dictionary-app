@@ -1,4 +1,12 @@
-<img src="../../assets/images/logo.svg" alt="dictionary logo">
-<p-dropdown [options]="fontOptions" [(ngModel)]="selectedFont"></p-dropdown>
-<p-inputSwitch [(ngModel)]="darkMode"></p-inputSwitch>
-<img src="../../assets/images/icon-moon.svg" alt="crescent moon icon">
+<img src="../../assets/images/logo.svg" alt="dictionary logo" />
+<div class="header-selection-container">
+  <p-dropdown
+    [options]="fontOptions"
+    [(ngModel)]="selectedFont"
+    (onChange)="switchFont()"
+  ></p-dropdown>
+  <div class="display-mode-selection-container">
+    <p-inputSwitch (onChange)="switchViewMode()"></p-inputSwitch>
+    <img src="../../assets/images/icon-moon.svg" alt="crescent moon icon" />
+  </div>
+</div>
