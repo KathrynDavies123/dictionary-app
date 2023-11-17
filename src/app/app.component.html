@@ -3,6 +3,7 @@
   [ngClass]="{ 'light-mode': !darkMode, 'dark-mode': darkMode }"
 >
   <app-header
+    [darkMode]="darkMode"
     (viewModeEmitter)="darkMode = !darkMode"
     (fontEmitter)="changeFont()"
   ></app-header>

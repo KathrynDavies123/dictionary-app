@@ -8,15 +8,24 @@
 @import "./app/search-bar/search-bar.component.scss";
 
 .app-container {
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    gap:45px;
-    margin-top:58px;
-    width:100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  padding-top: 58px;
+  width: 100vw;
 }
 
-app-header, app-search-bar {
-    width:50%;
+.app-container.light-mode {
+  background: $white;
+}
+
+.app-container.dark-mode {
+  background: $near-black;
+}
+
+app-header,
+app-search-bar {
+  width: 50%;
 }
