@@ -4,6 +4,7 @@
     [options]="fontOptions"
     [(ngModel)]="selectedFont"
     (onChange)="switchFont()"
+    [ngClass]="{ 'light-mode': !darkMode, 'dark-mode': darkMode }"
   ></p-dropdown>
   <div class="display-mode-selection-container">
     <p-inputSwitch (onChange)="switchViewMode()"></p-inputSwitch>
