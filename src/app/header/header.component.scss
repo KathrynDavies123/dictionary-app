@@ -16,12 +16,6 @@ app-header {
       display: flex;
       align-items: center;
       gap: 25px;
-      .light-moon {
-        stroke: $grey-moon;
-      }
-      .dark-moon {
-        stroke: $purple;
-      }
     }
   }
 }
@@ -113,16 +107,26 @@ app-header {
     display: flex;
     align-items: flex-end;
   }
-  .dark-mode {
-    .p-inputtext, .p-dropdown-item, .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
-      color: $white;
-    }
-    .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight:hover {
-      color: $purple;
-    }
-    .p-dropdown-panel {
-      box-shadow: 0px 5px 30px 0px #a445ed;
-      background: $darkest-grey;
-    }
+}
+
+.dark-mode {
+  .p-inputtext, .p-dropdown-item, .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: $white;
+  }
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight:hover {
+    color: $purple;
+  }
+  .p-dropdown-panel {
+    box-shadow: 0px 5px 30px 0px #a445ed;
+    background: $darkest-grey;
+  }
+  .display-mode-selection-container svg {
+    stroke: $purple;
+  }
+}
+
+.light-mode {
+  .display-mode-selection-container svg {
+    stroke: $grey-moon;
   }
 }

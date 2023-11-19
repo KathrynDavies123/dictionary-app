@@ -4,7 +4,6 @@
     [options]="fontOptions"
     [(ngModel)]="selectedFont"
     (onChange)="switchFont()"
-    [ngClass]="{ 'light-mode': !darkMode, 'dark-mode': darkMode }"
   ></p-dropdown>
   <div class="display-mode-selection-container">
     <p-inputSwitch (onChange)="switchViewMode()"></p-inputSwitch>
@@ -13,7 +12,6 @@
       width="22"
       height="22"
       viewBox="0 0 22 22"
-      [ngClass]="{ 'light-moon': !darkMode, 'dark-moon': darkMode }"
     >
       <path
         fill="none"

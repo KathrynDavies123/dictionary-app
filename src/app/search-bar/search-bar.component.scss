@@ -1,7 +1,46 @@
 @import "../../assets/styles/colors.scss";
+@import "../../assets/styles/fonts.scss";
 
 app-search-bar {
+  .p-input-icon-right {
+    width: 100%;
+    border-radius: 16px;
+    background: $near-white;
     .p-inputtext {
-        width:100%;
+        border-radius: 16px;
+      color: $dark-grey;
+      font-size: $heading-small;
+      font-weight: 700;
+      background: transparent;
+      border: 1px solid transparent;
+      width:100%;
+      padding: 20px 24px;
+      &::placeholder {
+        color: rgba(45, 45, 45, 0.25);
+      }
     }
+    .p-inputtext:enabled:focus {
+        box-shadow:none;
+        border: 1px solid $purple;
+    }
+  }
+  .p-input-icon-right > i:last-of-type {
+    color: $purple;
+  }
+}
+
+.dark-mode {
+  app-search-bar {
+    .p-input-icon-right {
+        border-radius:16px;
+    }
+    .p-inputtext {
+        border-radius: 16px;
+      color: $white;
+      background: $darkest-grey;
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.25);
+      }
+    }
+  }
 }
