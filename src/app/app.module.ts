@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 import { SearchBarModule } from './search-bar/search-bar.module';
+import { DefinitionModule } from './definition/definition.module';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent
    ],
   imports: [
@@ -16,7 +17,8 @@ import { SearchBarModule } from './search-bar/search-bar.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HeaderModule,
-    SearchBarModule
+    SearchBarModule,
+    DefinitionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

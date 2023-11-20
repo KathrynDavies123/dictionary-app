@@ -6,6 +6,7 @@
 @import "primeng/resources/themes/bootstrap4-light-purple/theme.css";
 @import "./app/header/header.component.scss";
 @import "./app/search-bar/search-bar.component.scss";
+@import "./app/definition/definition.component.scss";
 
 .app-container {
   display: flex;
@@ -26,6 +27,7 @@
 }
 
 app-header,
-app-search-bar {
+app-search-bar,
+app-definition {
   width: 50%;
 }

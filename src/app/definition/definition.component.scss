@@ -1,0 +1,51 @@
+@import "../../assets/styles/colors.scss";
+@import "../../assets/styles/fonts.scss";
+
+app-definition {
+  .definition-heading-container {
+    display: flex;
+    justify-content: space-between;
+    .definition-heading-text {
+      font-size: $heading-large;
+      margin: 0;
+      color: $dark-grey;
+      margin-bottom: 4px;
+    }
+    .definition-heading-subheading {
+      margin: 0;
+      color: $purple;
+      font-size: $heading-medium;
+    }
+    .definition-play-button {
+      display: flex;
+      align-items: center;
+      .p-button {
+        background: transparent;
+        border: none;
+        padding: 0;
+        &:focus {
+          box-shadow: none;
+        }
+        svg {
+          fill: $purple;
+          &:hover {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  .definition-body-container {
+    .definition-word-type {
+        font-size:$heading-medium;
+        font-style: italic;
+        color: $dark-grey;
+    }
+  }
+}
+
+.dark-mode {
+    .definition-heading-container .definition-heading-text, .definition-body-container .definition-word-type {
+    color: $white;
+  }
+}
