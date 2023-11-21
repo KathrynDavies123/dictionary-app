@@ -4,14 +4,12 @@
 app-search-bar {
   .p-input-icon-right {
     width: 100%;
-    border-radius: 16px;
-    background: $near-white;
     .p-inputtext {
-        border-radius: 16px;
+      background: $near-white;
+      border-radius:16px;
       color: $dark-grey;
       font-size: $heading-small;
       font-weight: 700;
-      background: transparent;
       border: 1px solid transparent;
       width:100%;
       padding: 20px 24px;
@@ -31,11 +29,7 @@ app-search-bar {
 
 .dark-mode {
   app-search-bar {
-    .p-input-icon-right {
-        border-radius:16px;
-    }
     .p-inputtext {
-        border-radius: 16px;
       color: $white;
       background: $darkest-grey;
       &::placeholder {

@@ -36,16 +36,92 @@ app-definition {
     }
   }
   .definition-body-container {
+    border-top: 1px solid $lightest-grey;
+    margin-top: 54px;
     .definition-word-type {
         font-size:$heading-medium;
-        font-style: italic;
         color: $dark-grey;
+        margin:0;
+        margin-top: -20px;
+        background: $white;
+        width:8%;
+    }
+    .definition-subheading {
+        font-size: $heading-small;
+        font-weight:400;
+        color: $light-grey;
+    }
+    .definition-meaning-list {
+      display:flex;
+      flex-direction:column;
+      gap:13px;
+      list-style: none;
+      li {
+        font-size: $body-medium;
+        line-height: 24px;
+        color: $dark-grey;
+        &::before {
+          content: "\2022";
+          color: $purple;
+          display:inline-block;
+          width:24px;
+          margin-left:-24px;
+        }
+        span {
+          display:block;
+          margin-top:13px;
+          color: $light-grey;
+        }
+      }
+    }
+    .definitions-synonyms-container {
+      display:flex;
+      margin-top: 63px;
+      gap:20px;
+      .definition-subheading {
+        margin:0;
+      }
+      .definitions-synonyms {
+        font-size:$heading-small;
+        color: $purple;
+        font-weight: 700;
+        margin:0;
+      }
     }
   }
+  .source-info-container {
+    border-top: 1px solid $lightest-grey;
+    margin-top: 40px;
+    padding-top:20px;
+    padding-bottom:100px;
+    display:flex;
+    gap:20px;
+    .source-text {
+      font-size: $body-small;
+      text-decoration: underline;
+      color: $light-grey;
+      margin:0;
+    }
+    a {
+      color:$dark-grey;
+      font-size:$body-small;
+    }
+  }
+
 }
 
 .dark-mode {
     .definition-heading-container .definition-heading-text, .definition-body-container .definition-word-type {
+    color: $white;
+    background: $near-black;
+  }
+  .definition-body-container {
+    border-top: 1px solid $grey;
+    .definition-meaning-list li {
+      color:$white;
+    }
+  }
+  .source-info-container a {
     color: $white;
   }
 }
