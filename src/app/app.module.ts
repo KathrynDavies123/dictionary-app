@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
@@ -18,7 +18,8 @@ import { DefinitionModule } from './definition/definition.module';
     BrowserAnimationsModule,
     HeaderModule,
     SearchBarModule,
-    DefinitionModule
+    DefinitionModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
