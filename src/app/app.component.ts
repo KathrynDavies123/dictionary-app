@@ -25,6 +25,7 @@ export class AppComponent {
     if (this.headerComponent) {
       this.selectedFont = this.headerComponent.selectedFont;
     }
+    return this.selectedFont;
   }
 
   updateDefinition() {
