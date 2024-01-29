@@ -32,12 +32,12 @@
   <ul class="definition-meaning-list">
     <li *ngFor="let definition of meaning.definitions">{{definition.definition}}</li>
   </ul>
-  <div class="definitions-synonyms-container">
-    <h4 class="definition-subheading" *ngIf="meaning.synonyms">Synonyms</h4>
+  <div class="definitions-synonyms-container" *ngIf="meaning.synonyms.length > 0">
+    <h4 class="definition-subheading">Synonyms</h4>
     <p class="definitions-synonyms" *ngFor="let synonym of meaning.synonyms">{{synonym}}</p>
   </div>
-  <div class="definitions-synonyms-container">
-    <h4 class="definition-subheading" *ngIf="meaning.antonyms">Antonyms</h4>
+  <div class="definitions-synonyms-container" *ngIf="meaning.antonyms.length > 0">
+    <h4 class="definition-subheading" >Antonyms</h4>
     <p class="definitions-synonyms" *ngFor="let antonyms of meaning.antonyms">{{antonyms}}</p>
   </div>
 </div>
