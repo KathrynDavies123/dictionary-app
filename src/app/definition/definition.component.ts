@@ -21,4 +21,17 @@ export class DefinitionComponent implements OnInit {
       this.apiData = data;
     });
   }
+
+  playAudio(data: DictionaryDefinition){
+    const audio = new Audio();
+    for (let i=0; i< data[0].phonetics.length; i++) {
+      audio.src = data[0].phonetics[i].audio;
+      if (data[0].phonetics[i].audio !== '') {
+        break;
+      }
+    }
+    audio.load();
+    audio.play();
+  }
+
 }
