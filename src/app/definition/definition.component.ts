@@ -1,5 +1,5 @@
 import { ApiService } from './../api-service/api-service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DictionaryDefinition } from '../config/constants';
 
 @Component({
@@ -8,7 +8,9 @@ import { DictionaryDefinition } from '../config/constants';
   styleUrls: ['./definition.component.scss']
 })
 export class DefinitionComponent implements OnInit {
+  @Input() searchTerm: string | undefined;
   apiData: DictionaryDefinition | undefined;
+
   constructor(private apiService: ApiService) {
     
   }
@@ -17,6 +19,7 @@ export class DefinitionComponent implements OnInit {
   }
 
   updateDefinition(searchTerm: string) {
+    this.apiData = undefined;
     this.apiService.getDefinitionByWord(searchTerm).subscribe(data => {
       this.apiData = data;
     });

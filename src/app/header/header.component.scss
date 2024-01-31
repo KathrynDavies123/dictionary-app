@@ -66,7 +66,6 @@ app-header {
     }
   }
   .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
-    color: $dark-grey;
     background: transparent;
   }
   .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
@@ -110,9 +109,12 @@ app-header {
 }
 
 .dark-mode {
-  .p-inputtext, .p-dropdown-item, .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  .p-inputtext,
+  .p-dropdown-item,
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
     color: $white;
   }
+
   .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight:hover {
     color: $purple;
   }
@@ -128,5 +130,8 @@ app-header {
 .light-mode {
   .display-mode-selection-container svg {
     stroke: $grey-moon;
+  }
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: $dark-grey;
   }
 }

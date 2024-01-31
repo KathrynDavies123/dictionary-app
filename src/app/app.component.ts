@@ -29,6 +29,7 @@ export class AppComponent {
   }
 
   updateDefinition() {
+    this.searchTerm = '';
     if(this.searchComponent && this.definitionComponent) {
       this.searchTerm = this.searchComponent.searchTerm;
       this.definitionComponent.updateDefinition(this.searchTerm);

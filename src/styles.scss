@@ -11,10 +11,11 @@
 .app-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 45px;
   padding-top: 58px;
+  min-height:100vh;
 }
 
 .app-container.light-mode {

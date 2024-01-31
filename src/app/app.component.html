@@ -7,6 +7,6 @@
     (fontEmitter)="changeFont()"
   ></app-header>
   <app-search-bar (searchTermEmitter)="updateDefinition()"></app-search-bar>
-  <app-definition [ngStyle]="{'font-family': changeFont()}"></app-definition>
+  <app-definition [ngStyle]="{'font-family': changeFont()}" [searchTerm]="searchTerm"></app-definition>
 </div>
 <router-outlet></router-outlet>
