@@ -8,7 +8,7 @@ Dictionary web app created with Angular, Typescript and Sass using the open Dict
 [Live Site](https://main--animated-entremet-b5cbdb.netlify.app/)
 
 TODO: 
-- Add "word not found" section for when a search is unsuccessful
+- Add error when search bar is empty
 - Ensure responsiveness on all devices
 
 ![image](https://github.com/KathrynDavies123/dictionary-app/assets/103680044/54c13701-fb86-4658-947f-30471d66963e)
