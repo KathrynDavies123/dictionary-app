@@ -7,10 +7,20 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
   searchTerm: string = '';
+  emptyInput: boolean = false;
   @Output() searchTermEmitter: EventEmitter<string> = new EventEmitter()
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onFocus() {
+    if (this.searchTerm == '') {
+      this.emptyInput = true;
+    }
+    else {
+      this.emptyInput = false;
+    }
   }
 
   confirmWord() {
