@@ -14,17 +14,14 @@ export class SearchBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  onFocus() {
-    if (this.searchTerm == '') {
-      this.emptyInput = true;
+  confirmWord() {
+    if (this.searchTerm !== '') {
+      this.emptyInput = false;
+      this.searchTermEmitter.emit(this.searchTerm)
     }
     else {
-      this.emptyInput = false;
+      this.emptyInput = true;
     }
-  }
-
-  confirmWord() {
-    this.searchTermEmitter.emit(this.searchTerm)
   }
 
 }
