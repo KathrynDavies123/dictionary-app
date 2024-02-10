@@ -8,6 +8,10 @@
 @import "./app/search-bar/search-bar.component.scss";
 @import "./app/definition/definition.component.scss";
 
+body {
+  margin:0;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
