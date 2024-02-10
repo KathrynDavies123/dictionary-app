@@ -15,7 +15,7 @@
   align-items: center;
   gap: 45px;
   padding-top: 58px;
-  min-height:100vh;
+  min-height: 100vh;
 }
 
 .app-container.light-mode {
@@ -30,4 +30,13 @@ app-header,
 app-search-bar,
 app-definition {
   width: 50%;
+}
+
+@media (max-width: 1000px) {
+  app-header,
+  app-search-bar,
+  app-definition {
+    width: 100%;
+    padding: 0 20px 0 20px;
+  }
 }

@@ -135,3 +135,14 @@ app-header {
     color: $dark-grey;
   }
 }
+
+@media (max-width: 1700px) {
+  app-header .header-selection-container .display-mode-selection-container {
+    width:50%;
+  }
+}
+@media (max-width: 1000px) {
+  app-header .header-selection-container {
+    width:50%;
+  }
+}
