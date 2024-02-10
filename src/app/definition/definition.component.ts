@@ -10,6 +10,7 @@ import { DictionaryDefinition } from '../config/constants';
 export class DefinitionComponent implements OnInit {
   @Input() searchTerm: string | undefined;
   apiData: DictionaryDefinition | undefined;
+  apiError: boolean = false;
 
   constructor(private apiService: ApiService) {
     
@@ -20,9 +21,15 @@ export class DefinitionComponent implements OnInit {
 
   updateDefinition(searchTerm: string) {
     this.apiData = undefined;
-    this.apiService.getDefinitionByWord(searchTerm).subscribe(data => {
-      this.apiData = data;
-    });
+    this.apiError = false;
+    this.apiService.getDefinitionByWord(searchTerm).subscribe({
+      next: (data) => {
+        this.apiData = data;
+      },
+      error: () => {
+        this.apiError = true;
+      }
+  })
   }
 
   playAudio(data: DictionaryDefinition){
