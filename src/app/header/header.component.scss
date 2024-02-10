@@ -145,4 +145,13 @@ app-header {
   app-header .header-selection-container {
     width:50%;
   }
+
+  @media (max-width: 500px) {
+    app-header .header-selection-container {
+      width:auto;
+      .header-selection-container {
+        width:auto;
+      }
+    }
+  }
 }
