@@ -4,27 +4,24 @@
     <h2 class="definition-heading-text">{{apiData[0].word}}</h2>
     <p class="definition-heading-subheading">{{apiData[0].phonetic}}</p>
   </div>
-  <p-button class="definition-play-random-change-for-merge-conflake-button" (click)="playAudio(apiData)">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="75"
-      height="75"
-      viewBox="0 0 75 75"
-    >
-      <g fill-rule="evenodd">
-        <circle
-          cx="37.5"
-          cy="37.5"
-          r="37.5"
-          fill="#a445ed"
-          opacity=".25"
-          onmouseover="evt.target.setAttribute('opacity', '1');"
-          onmouseout="evt.target.setAttribute('opacity', '.25');"
-        />
-        <path d="M29 27v21l21-10.5z" />
-      </g>
-    </svg>
-  </p-button>
+  <p-button class="definition-play-button" (click)="playAudio(apiData)"></p-button>
+    <p-button class="definition-play-button" (click)="playAudio(apiData)">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           width="75"
+           height="75"
+           viewBox="0 0 75 75">
+        <g fill-rule="evenodd">
+          <circle cx="37.5"
+                  cy="37.5"
+                  r="37.5"
+                  fill="#a445ed"
+                  opacity=".25"
+                  onmouseover="evt.target.setAttribute('opacity', '1');"
+                  onmouseout="evt.target.setAttribute('opacity', '.25');" />
+          <path d="M29 27v21l21-10.5z" />
+        </g>
+      </svg>
+    </p-button>
 </div>
 <div class="definition-body-container" *ngFor="let meaning of apiData[0].meanings">
   <h3 class="definition-word-type">{{meaning.partOfSpeech}}</h3>
