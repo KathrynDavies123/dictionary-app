@@ -5,8 +5,6 @@ Dictionary web app created with Angular, Typescript and Sass using the open Dict
 - Font-family change dropdown
 - Audio playback of searched word
 
-[Live Site](https://main--animated-entremet-b5cbdb.netlify.app/)
-
 TODO: 
 - Ensure responsiveness on all devices
 
